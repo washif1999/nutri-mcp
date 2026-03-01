@@ -1,0 +1,13 @@
+{
+    "servers": {
+        "hello-world": {
+            "command": "python",
+            "args": [
+                "main.py"
+            ],
+            "env": {
+                "PYTHONPATH": "."
+            }
+        }
+    }
+}

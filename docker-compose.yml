@@ -1,0 +1,27 @@
+services:
+  nutri-mcp:
+    image: team-mcp-service
+    container_name: nutri-mcp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9000:9000"
+    env_file:
+      - .env.docker
+    volumes:
+      - ./db:/app/db        # persist SQLite database
+    restart: unless-stopped
+    networks:
+      - nutri-network
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:9000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+networks:
+  nutri-network:
+    driver: bridge
+    name: nutri-network

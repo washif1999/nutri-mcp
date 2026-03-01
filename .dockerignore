@@ -1,0 +1,28 @@
+# ── Python artifacts ──────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+
+# ── Environment files ────────────────────────
+.env
+.env.docker
+
+# ── Database (persisted via volume) ──────────
+db/
+*.db
+
+# ── Testing ───────────────────────────────────
+tests/
+.pytest_cache/
+.coverage
+
+# ── Docs (not needed in image) ────────────────
+*.md
+LICENSE
+
+# ── Dev tools ─────────────────────────────────
+.git/
+.gitignore
+Makefile
