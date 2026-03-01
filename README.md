@@ -33,6 +33,18 @@ This MCP server provides intelligent nutrition and health tracking capabilities 
 
 ---
 
+## Screenshots
+
+### Startup Banner
+![Startup Banner](assets/screenshots/banner.png)
+
+### MCP Inspector — Tools Connected
+![MCP Inspector](assets/screenshots/inspector.png)
+
+### Test Suite (45 tests)
+![Tests](assets/screenshots/tests.png)
+
+
 ## Project Structure
 
 ```
